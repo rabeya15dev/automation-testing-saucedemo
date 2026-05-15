@@ -1,0 +1,30 @@
+{
+  "name": "saucedemo-ui-tests",
+  "version": "1.0.0",
+  "description": "SauceDemo UI Automation Testing with Playwright",
+  "license": "ISC",
+  "author": "Rabeya Bosri",
+  "type": "module",
+  "main": "playwright.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "q1": "npx playwright test tests/q1_lockedUser.spec.js    --headed",
+    "q2": "npx playwright test tests/q2_checkout.spec.js      --headed",
+    "q3": "npx playwright test tests/q3_performance.spec.js   --headed",
+    "all": "npx playwright test --headed",
+    "allure:generate": "npx allure generate allure-results --clean",
+    "allure:open": "npx allure open allure-report",
+    "allure:report": "cmd /c \"set \"JAVA_HOME=C:\\Program Files\\Java\\jdk-26.0.1\" && npx allure generate allure-results --clean && npx allure open allure-report\"",
+    "report": "cmd /c \"set \"JAVA_HOME=C:\\Program Files\\Java\\jdk-26.0.1\" && npx allure generate allure-results --clean && npx allure open allure-report\""
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.8.0",
+    "allure-commandline": "^2.41.0",
+    "allure-playwright": "^3.8.0"
+  }
+}
+
+
