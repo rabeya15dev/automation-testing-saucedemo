@@ -33,13 +33,7 @@ export class CheckoutPage extends BasePage {
     async waitForStepOne() {
         await this.page.waitForURL('**/checkout-step-one.html');
     }
-
-
-    // wait for step 2 overview page to load
-    async waitForStepTwo() {
-        await this.page.waitForURL('**/checkout-step-two.html');
-        
-    }
+    
 
 
     // wait for confirmation page to load
@@ -58,6 +52,21 @@ export class CheckoutPage extends BasePage {
         await this.waitForStepTwo();
        
     }
+
+// wait for step 1 page to load
+async waitForStepOne() {
+    await this.page.waitForURL('**/checkout-step-one.html');
+}
+
+// ADD THIS
+async waitForStepTwo() {
+    await this.page.waitForURL('**/checkout-step-two.html');
+}
+
+// wait for confirmation page to load
+async waitForConfirmation() {
+    await this.page.waitForURL('**/checkout-complete.html');
+}
 
 
     // get all product names on overview page
@@ -97,7 +106,7 @@ export class CheckoutPage extends BasePage {
     async getTotal() {
         const text = await this.summaryTotal.textContent();
         return parseFloat(text.replace(/[^0-9.]/g, ''));
-         await this.page.waitForTimeout(2000);
+        
     }
 
 

@@ -59,7 +59,7 @@ saucedemo-final/
 - Add 3 items: Backpack, Bike Light, Bolt T-Shirt
 - Verify cart badge shows 3
 - Go to cart — verify all 3 product names
-- Proceed to checkout — fill John Doe 12345
+- Proceed to checkout — fill Rabeya bosri 511711
 - On overview page: verify product names
 - On overview page: verify subtotal = sum of item prices
 - On overview page: verify total = subtotal + tax
@@ -127,40 +127,38 @@ npx playwright install
 
 ```bash
 # Run Q1 only
-npm run q1
-
+ q1: "npx playwright test tests/q1_lockedUser.spec.js    --headed",
+    
 # Run Q2 only
-npm run q2
-
+q2: "npx playwright test tests/q2_checkout.spec.js      --headed",
+   
 # Run Q3 only
-npm run q3
+q3: "npx playwright test tests/q3_performance.spec.js   --headed",
 
 # Run all 3 together in sequence
 npm run all
 ```
 
----
+                              
 
-## Generate Allure Report
+## Generate Report
 
 ```bash
-# Step 1: run tests (creates allure-results/ folder)
-npm run all
+# Step 1: run tests 
+npx playwright test --headed
 
 # Step 2: generate and open report
-npm run report
+npx playwright show-report html-report
 ```
 
 Report opens automatically in your browser.
 
-> Java must be installed for Allure.
+
 ---
 
 ## Folders Created After Running Tests
 
 ```
-allure-results/    ← raw test data (created automatically)
-allure-report/     ← visual HTML report (created by npm run report)
 html-report/       ← Playwright HTML report (created automatically)
 test-results/      ← screenshots/videos of failed tests
 ```

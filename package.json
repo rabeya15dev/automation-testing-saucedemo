@@ -2,6 +2,14 @@
   "name": "saucedemo-ui-tests",
   "version": "1.0.0",
   "description": "SauceDemo UI Automation Testing with Playwright",
+  "homepage": "https://github.com/rabeya15dev/automation-testing-saucedemo#readme",
+  "bugs": {
+    "url": "https://github.com/rabeya15dev/automation-testing-saucedemo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rabeya15dev/automation-testing-saucedemo.git"
+  },
   "license": "ISC",
   "author": "Rabeya Bosri",
   "type": "module",
@@ -19,6 +27,16 @@
     "allure:report": "cmd /c \"set \"JAVA_HOME=C:\\Program Files\\Java\\jdk-26.0.1\" && npx allure generate allure-results --clean && npx allure open allure-report\"",
     "report": "cmd /c \"set \"JAVA_HOME=C:\\Program Files\\Java\\jdk-26.0.1\" && npx allure generate allure-results --clean && npx allure open allure-report\""
   },
+  "dependencies": {
+    "allure-js-commons": "^3.8.0",
+    "charenc": "^0.0.2",
+    "crypt": "^0.0.2",
+    "is-buffer": "^1.1.6",
+    "md5": "^2.3.0",
+    "playwright": "^1.60.0",
+    "playwright-core": "^1.60.0",
+    "undici-types": "^7.24.6"
+  },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.8.0",
@@ -26,5 +44,3 @@
     "allure-playwright": "^3.8.0"
   }
 }
-
-
